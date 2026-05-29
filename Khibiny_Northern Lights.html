@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Северное сияние моей мечты | Хибины, Кольский полуостров</title>
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fafbf9;
+            color: #1a2e2a;
+            line-height: 1.55;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* ========= ГРАДИЕНТНЫЙ ЗАГОЛОВОК С ПРОЗРАЧНОСТЬЮ ========= */
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .gradient-headline {
+            font-size: clamp(2rem, 7vw, 3.8rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #0E4C4A, #2F8B7A, #7AC7A4, #C7E9D0);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            animation: auroraGlow 12s ease infinite;
+        }
+        @keyframes auroraGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .hero-sub {
+            display: inline-block;
+            background: rgba(47, 139, 122, 0.1);
+            backdrop-filter: blur(4px);
+            padding: 0.4rem 1.4rem;
+            border-radius: 60px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #226b5e;
+            letter-spacing: 0.5px;
+        }
+
+        /* ========= ВИЗУАЛЬНАЯ ИЕРАРХИЯ ========= */
+        h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin: 2.8rem 0 1rem 0;
+            letter-spacing: -0.01em;
+            border-left: 6px solid #2b8b7a;
+            padding-left: 1.2rem;
+            color: #154e44;
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 1.8rem 0 0.8rem;
+            color: #1f6e5c;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .lead {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2e6a5c;
+            border-bottom: 2px solid #d9e8e2;
+            padding-bottom: 0.6rem;
+            margin-bottom: 1.5rem;
+        }
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #2a423d;
+        }
+
+        /* ========= АКЦЕНТНЫЕ БЛОКИ (цитаты) ========= */
+        .quote-block {
+            background: linear-gradient(115deg, #eef7f2, #e2f0ea);
+            border-left: 8px solid #2b8b7a;
+            padding: 1.5rem 2rem;
+            border-radius: 1.6rem;
+            margin: 2rem 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-style: italic;
+            color: #146353;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.03);
+        }
+        .slogan-block {
+            background: #e2efe9;
+            text-align: center;
+            padding: 1.8rem;
+            border-radius: 2rem;
+            margin: 2rem 0;
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            color: #0e5f4e;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        /* ========= СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ ========= */
+        .full-width-img {
+            width: 100%;
+            border-radius: 1.8rem;
+            margin: 1.8rem 0;
+            box-shadow: 0 18px 28px -12px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease;
+        }
+        .full-width-img:hover {
+            transform: scale(1.01);
+        }
+        .grid-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .grid-gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 1.5rem;
+            transition: all 0.3s;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+        }
+        .grid-gallery img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 25px -12px rgba(43, 139, 122, 0.3);
+        }
+
+        /* ========= КНОПКА ССЫЛКИ ========= */
+        .link-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #1f705f;
+            color: white;
+            padding: 0.85rem 2rem;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 1rem 0;
+            transition: all 0.25s;
+        }
+        .link-button:hover {
+            background: #0b5648;
+            gap: 18px;
+            transform: translateY(-2px);
+        }
+
+        /* ========= ХЕШТЕГИ ========= */
+        .hashtags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+            margin: 2rem 0 1rem;
+        }
+        .hashtag {
+            background: rgba(47, 139, 122, 0.08);
+            padding: 0.4rem 1.2rem;
+            border-radius: 60px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1d6b5b;
+            border: 1px solid #cde3db;
+            transition: 0.2s;
+        }
+        .hashtag:hover {
+            background: #2b8b7a;
+            color: white;
+            border-color: #2b8b7a;
+        }
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #6e9186;
+            border-top: 1px solid #d2e3dc;
+            padding-top: 2rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 780px) {
+            .container {
+                padding: 1rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            .slogan-block {
+                font-size: 1.4rem;
+                padding: 1.2rem;
+            }
+            .quote-block {
+                font-size: 1rem;
+                padding: 1rem;
+            }
+        }
+        .icon-accent {
+            color: #2b8b7a;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- ГРАДИЕНТНЫЙ ЗАГОЛОВОК -->
+    <div class="hero">
+        <div class="gradient-headline">Северное сияние моей мечты<br>и горы, которые остаются в сердце</div>
+        <div class="hero-sub"><i class="fas fa-location-dot"></i> Мурманская область · Хибины · Кольский полуостров</div>
+    </div>
+
+    <!-- ВСТУПЛЕНИЕ -->
+    <p>Есть мечты, которые живут внутри нас годами. Одна из моих таких мечт — увидеть Северное сияние своими глазами. И вот однажды северная ночь подарила мне настоящее чудо.</p>
+
+    <!-- ФОТО: СЕВЕРНОЕ СИЯНИЕ + ЗВЕЗДНОЕ НЕБО -->
+    <img class="full-width-img" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&auto=format" alt="Северное сияние, зелёные ленты над Заполярьем" loading="lazy">
+
+    <p>Небо над Мурманской областью вдруг ожило. Из темноты медленно появились переливающиеся зеленые ленты света, которые начали танцевать над горизонтом. Казалось, что сама природа устроила грандиозное представление только для тех, кто готов ждать, верить и восхищаться. В тот момент невозможно было думать ни о чем другом — только смотреть вверх и запоминать каждую секунду этого волшебства.</p>
+
+    <p>Но Север подарил мне гораздо больше.</p>
+
+    <!-- РАЗДЕЛ: ХИБИНЫ И ГОРЫ (без удалённых фото) -->
+    <h2><i class="fas fa-mountain icon-accent"></i> Хибины — суровые, величественные, прекрасные</h2>
+    <p>Вместе с сиянием я открыла для себя Хибины — суровые, величественные и невероятно красивые горы Кольского полуострова. Горные маршруты вели через каменные перевалы, бурные водопады и бескрайние долины. Каждый новый подъем открывал такие панорамы, что хотелось просто остановиться и молча любоваться этим простором.</p>
+
+    <!-- ЗОЛОТАЯ ОСЕНЬ И ВОДОПАДЫ -->
+    <h3><i class="fas fa-leaf icon-accent"></i> Северная осень — золото, багрянец и свежесть</h3>
+    <p>Особенно запомнилась северная осень. Тундра вспыхивала золотыми, оранжевыми и багряными оттенками. Между гор тянулись бесконечные леса, прозрачные озера отражали облака, а свежий северный ветер напоминал, насколько человек мал перед величием природы.</p>
+
+    <!-- СЕТКА: водопад + осенний лес (без удалённых фото) -->
+    <div class="grid-gallery">
+        <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=600&auto=format" alt="Водопад среди северного леса">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&auto=format" alt="Золотая осень в горах Хибины">
+    </div>
+
+    <p>Именно здесь особенно остро понимаешь простую истину: мечты действительно должны сбываться. Они приводят нас в удивительные места, наполняют энергией, помогают увидеть мир шире и почувствовать себя по-настоящему живым.</p>
+
+    <!-- АКЦЕНТНАЯ ЦИТАТА ПРО ГОРЫ -->
+    <div class="quote-block">
+        <i class="fas fa-quote-left"></i> «Лучше гор могут быть только горы!» — эта фраза звучала в голове на каждом маршруте по Хибинам.
+        <div style="margin-top: 0.6rem; font-style: normal; font-weight: 400; font-size: 0.95rem;">Перевалы, скальные выходы, бескрайние плато — каждый шаг открывал новую грань северной красоты.</div>
+    </div>
+
+    <!-- ЛИЧНЫЕ ВПЕЧАТЛЕНИЯ И ВОЗВРАЩЕНИЕ -->
+    <h2><i class="fas fa-feather-alt icon-accent"></i> Север не отпускает</h2>
+    <p>А возвращаясь домой, я увезла с собой еще одно важное ощущение: Север не отпускает. Он вдохновляет, закаляет, учит ценить простые вещи и возвращаться к самому себе. Теперь я точно знаю, почему здесь говорят:</p>
+
+    <div class="slogan-block">
+        <i class="fas fa-compass"></i> «На Севере — жить!»
+    </div>
+
+    <p>И мне уже хочется снова вернуться туда, где над вершинами танцует Северное сияние, а горы хранят свою вечную тишину. Это чувство свободы и силы останется со мной навсегда.</p>
+
+    <!-- ССЫЛКА НА ПОДРОБНОСТИ -->
+    <div style="text-align: center; margin: 2rem 0 0rem;">
+        <a href="#" class="link-button">📍 Подробнее о путешествии <i class="fas fa-arrow-right"></i></a>
+        <p style="font-size: 0.75rem; margin-top: 0.5rem; color: #5f8a7e;">[ВСТАВИТЬ ССЫЛКУ]</p>
+    </div>
+
+    <!-- ХЕШТЕГИ -->
+    <div class="hashtags">
+        <span class="hashtag">#МурманскаяОбласть</span>
+        <span class="hashtag">#Хибины</span>
+        <span class="hashtag">#СеверноеСияние</span>
+        <span class="hashtag">#КольскийПолуостров</span>
+        <span class="hashtag">#ПутешествияПоРоссии</span>
+        <span class="hashtag">#СеверЗовет</span>
+        <span class="hashtag">#НаСевереЖить</span>
+        <span class="hashtag">#РусскийСевер</span>
+        <span class="hashtag">#ГорыИСияние</span>
+    </div>
+
+    <footer>
+        <i class="fas fa-camera"></i> История, вдохновленная северным небом и древними горами<br>
+        © 2025 · Путешествие к мечте
+    </footer>
+</div>
+</body>
+</html>
